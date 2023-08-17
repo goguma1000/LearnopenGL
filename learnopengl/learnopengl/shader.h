@@ -100,9 +100,14 @@ public:
 	void set4f(const std::string& name, float x, float y, float z, float w) {
 		glUniform4f(glGetUniformLocation(ID, name.c_str()), x, y, z, w);
 	}
-	void set3f(const std::string& name, float x, float y, float z) {
+	void setVec3(const std::string& name, glm::vec3 &value) {
+		glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+	}
+	void setVec3(const std::string& name, float x, float y, float z) {
 		glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
 	}
-
+	void setMat4(const std::string& name, glm::mat4 &value) {
+		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()),1,GL_FALSE, &value[0][0]);
+	}
 };
 #endif // !SHADER_H

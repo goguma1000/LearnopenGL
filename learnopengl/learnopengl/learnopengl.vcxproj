@@ -142,17 +142,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LearnOpenGL.cpp">
+    <ClCompile Include="BasicLightingExercise.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GettingStarted\LearnOpenGL.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="LearnLight.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="FPScamera.h" />
     <ClInclude Include="shader.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FragmentShader.frag" />
-    <None Include="VertexShader.vert" />
+    <None Include="EX_LightingFS.frag" />
+    <None Include="EX_LightingVS.vert" />
+    <None Include="GettingStarted\FragmentShader.frag" />
+    <None Include="GettingStarted\VertexShader.vert" />
+    <None Include="GouraudLighting.frag" />
+    <None Include="GouraudLIghting.vert" />
+    <None Include="LightingFS.frag" />
+    <None Include="LightingVS.vert" />
+    <None Include="Lighting_Cube_FS.frag" />
+    <None Include="Shader\fShaderExercise.frag" />
+    <None Include="Shader\vShaderExercise.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
