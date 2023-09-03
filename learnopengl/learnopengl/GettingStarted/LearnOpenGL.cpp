@@ -4,9 +4,9 @@
 #include<glm/gtc/matrix_transform.hpp>
 #include<glm/gtc/type_ptr.hpp>
 #include<iostream>
-#include"shader.h"
-#include"camera.h"
-#include"stb_image.h"
+#include"../shader.h"
+#include"../camera.h"
+#include"../stb_image.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
