@@ -145,10 +145,13 @@
     <ClCompile Include="Blending.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Cubemaps.cpp" />
+    <ClCompile Include="Cubemaps.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="DepthTesting.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="EnvironmentMapping.cpp" />
     <ClCompile Include="FaceCulling.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -160,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="glad.c" />
     <ClCompile Include="Lighting\LearnLight.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ModelLoading\ModelLoading.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="stb_image.cpp" />
@@ -179,6 +185,8 @@
     <None Include="basicFS.frag" />
     <None Include="basicVS.vert" />
     <None Include="DepthTestingFS.frag" />
+    <None Include="EnvironmentMappingFS.frag" />
+    <None Include="EnvironmentMappingVS.vert" />
     <None Include="FramebufferFS.frag" />
     <None Include="FramebufferVS.vert" />
     <None Include="GettingStarted\FragmentShader.frag" />
